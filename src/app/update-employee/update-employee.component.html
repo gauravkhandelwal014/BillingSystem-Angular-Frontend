@@ -1,0 +1,152 @@
+<div class="m-5">
+   <h3 class="mb-4"> Update Data </h3>
+   <form (ngSubmit) = "onSubmit()" [formGroup]="updateForm">
+
+     <div class="d-flex justify-content-between">
+        <div>
+           <div class="form-group">
+               <div class="d-flex">
+                  <label class="w-input"> Gst No</label>
+                  <input type="number" class ="form-control" id = "gstNo" 
+                  [(ngModel)] = "employee.gstNo" name = "gstNo" formControlName="gstNo">
+                  <span class="p-2 bg-danger rounded" [ngClass]="{
+                     'bg-danger': updateForm.controls.gstNo.invalid,
+                     'bg-success': updateForm.controls.gstNo.valid
+                     }">
+                  <img src="../../assets/check-solid.svg" alt="✔" width="15" class="svg-icon"></span>
+               </div>
+              
+               <small id="gstnHelp" class="form-text text-muted">GST No. must of <strong>15 digits</strong>.</small>
+            </div>
+
+           <div class="form-group d-flex">
+              <label class="w-input"> Name</label>
+              <input type="text" class ="form-control" id = "firstName"
+              [(ngModel)] = "employee.name" name = "firstName" formControlName="firstName">
+           </div>
+           <div class="form-group d-flex">
+              <label class="w-input"> Country</label>
+              <input type="text" class ="form-control" id = "country" 
+              [(ngModel)] = "employee.country" name = "country" formControlName="country">
+           </div>
+           <div class="form-group d-flex">
+              <label class="w-input"> Latitude</label>
+              <input type="text" class ="form-control" id = "latitude" 
+              [(ngModel)] = "employee.latitude" name = "latitude" formControlName="latitude">
+           </div>
+        </div>
+        <div>
+           <div class="form-group d-flex">
+              <label class="w-input"> Pan No</label>
+              <input type="text" class ="form-control" id = "panNo" 
+              [(ngModel)] = "employee.panNo" name = "panNo"  formControlName="panNo">
+           </div>
+           <div class="form-group d-flex">
+              <label class="w-input"> Address</label>
+              <textarea type="text" class ="form-control" id = "address"
+              [(ngModel)] = "employee.address" name = "address" formControlName="address"></textarea>
+           </div>
+
+           <div class="form-group d-flex">
+              <label class="w-input"> State</label>
+              <select class="form-select form-control" id = "state" 
+              [(ngModel)] = "employee.state" name = "state" formControlName="state">
+                 <option selected disabled hidden>Select State</option>
+                 <option value="rajasthan">Rajasthan</option>
+                 <option value="gujarat">Gujarat</option>
+                 <option value="maharashtra">Maharashtra</option>
+                 <option value="goa">Goa</option>
+                 <option value="karnataka">Karnataka</option>
+              </select>
+           </div>
+
+
+           <div class="form-group d-flex">
+              <label class="w-input"> Mobile No </label>
+              <input type="text" class ="form-control" id = "mobileNo" 
+              [(ngModel)] = "employee.mobileNo" name = "mobileNo"  formControlName="mobileNo">
+           </div>
+           <div class="form-group d-flex">
+              <label class="w-input"> Longitude</label>
+              <input type="text" class ="form-control" id = "longitude" 
+              [(ngModel)] = "employee.longitude" name = "longitude"  formControlName="longitude">
+           </div>
+        </div>
+        <div>
+           <div class="form-group d-flex">
+              <label class="w-input"> Email Id</label>
+              <input type="email" class ="form-control" id = "emailId"
+              [(ngModel)] = "employee.emailId" name = "emailId" formControlName="emailId">
+ 
+           </div>
+           <div class="form-group d-flex">
+              <label class="w-input"> Code</label>
+              <input type="text" class ="form-control" id = "code" 
+              [(ngModel)] = "employee.code" name = "code" formControlName="code">
+           </div>
+           <div class="form-group d-flex">
+              <label class="w-input"> Pin Code</label>
+              <input type="text" class ="form-control" id = "pinCode" 
+              [(ngModel)] = "employee.pinCode" name = "pinCode" formControlName="pinCode">
+           </div>
+           <div class="form-group d-flex">
+              <label class="w-input"> City</label>
+              <input type="text" class ="form-control" id = "city" 
+              [(ngModel)] = "employee.city" name = "city" formControlName="city">
+           </div>
+           <div class="form-group d-flex">
+              <label class="w-input"> Currency</label>
+              <input type="text" class ="form-control" id = "currency" 
+              [(ngModel)] = "employee.currency" name = "currency" formControlName="currency">
+           </div>
+        </div>
+     </div>
+     <div class="mt-5 border p-2">     
+     
+     <h5 class="text-center mt-2">Contact Details</h5>
+     <hr>
+     <div class="d-flex justify-content-between">
+        <div>
+           <div class="form-group d-flex">
+              <label class="w-input"> Name</label>
+              <input type="text" class ="form-control" id = "cpdName" 
+              [(ngModel)] = "employee.cpdName" name = "cpdName" formControlName="cpdName">
+           </div>
+           <div class="form-group d-flex">
+              <label class="w-input"> Department</label>
+              <input type="text" class ="form-control" id = "cpdDepartment" 
+              [(ngModel)] = "employee.cpdDepartment" name = "cpdDepartment" formControlName="cpdDepartment">
+           </div>
+        </div>
+        <div>
+           <div class="form-group d-flex">
+              <label class="w-input"> Mobile No</label>
+              <input type="text" class ="form-control" id = "cpdMobileNo" 
+              [(ngModel)] = "employee.cpdMobileNo" name = "cpdMobileNo"  formControlName="cpdMobileNo">
+           </div>
+           <div class="form-group d-flex">
+              <label class="w-input"> Designation</label>
+              <input type="text" class ="form-control" id = "cpdDesignation" 
+              [(ngModel)] = "employee.cpdDesignation" name = "cpdDesignation"  formControlName="cpdDesignation">
+           </div>
+        </div>
+        <div>
+           <div class="form-group d-flex">
+              <label class="w-input"> Email</label>
+              <input type="text" class ="form-control" id = "cpdEmail" 
+              [(ngModel)] = "employee.cpdEmail" name = "cpdEmail"  formControlName="cpdEmail">
+           </div>
+        </div>
+     </div></div>
+
+     <div class="btn-container"> 
+        <div class="d-flex">
+           <button class="btn btn-success mr-2" [disabled]="updateForm.invalid" type ="submit">Submit</button>
+           <button class="btn btn-danger" ng-click="goToEmployeeList()">Cancel</button>
+     </div>
+        
+     </div>
+
+     
+   </form>
+</div>

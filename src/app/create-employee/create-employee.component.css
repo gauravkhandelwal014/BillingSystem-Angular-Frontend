@@ -1,0 +1,17 @@
+.w-input {
+    width: 130px !important;
+}
+
+input.form-control.ng-invalid.ng-touched {
+    border: 1px solid rgb(255, 41, 41);
+  }
+  
+.svg-icon {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(308deg) brightness(111%) contrast(101%);
+}
+
+.btn-container {
+    margin-top: 20px;
+    display: grid;
+    place-items: center;
+}
